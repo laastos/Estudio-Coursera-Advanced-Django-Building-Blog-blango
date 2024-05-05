@@ -30,16 +30,16 @@ DEBUG = True
 PROJECT_ENVIRONMENT = "Codium"
 
 if PROJECT_ENVIRONMENT == "Local":
-    ALLOWED_HOSTS = []
+  ALLOWED_HOSTS = []
 elif PROJECT_ENVIRONMENT == "Codium":
-    ALLOWED_HOSTS = ['*']
-    X_FRAME_OPTIONS = 'ALLOW-FROM ' + os.environ.get('CODIO_HOSTNAME') + '-8000.codio.io'
-    CSRF_COOKIE_SAMESITE = None
-    CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('CODIO_HOSTNAME') + '-8000.codio.io']
-    CSRF_COOKIE_SECURE = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SAMESITE = 'None'
-    SESSION_COOKIE_SAMESITE = 'None'
+  ALLOWED_HOSTS = ['*']
+  X_FRAME_OPTIONS = 'ALLOW-FROM ' + os.environ.get('CODIO_HOSTNAME') + '-8000.codio.io'
+  CSRF_COOKIE_SAMESITE = None
+  CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('CODIO_HOSTNAME') + '-8000.codio.io']
+  CSRF_COOKIE_SECURE = True
+  SESSION_COOKIE_SECURE = True
+  CSRF_COOKIE_SAMESITE = 'None'
+  SESSION_COOKIE_SAMESITE = 'None'
 
 # Application definition
 
