@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +27,7 @@ SECRET_KEY = 'django-insecure-+sn%dpa!086+g+%44z9*^j^q-u4n!j(#wl)x9a%_1op@zz2+1-
 DEBUG = True
 
 # Environment
-PROJECT_ENVIRONMENT = os.getenv("ENVIRONMENT" )
+PROJECT_ENVIRONMENT = "Codium"
 
 if PROJECT_ENVIRONMENT == "Local":
     ALLOWED_HOSTS = []
