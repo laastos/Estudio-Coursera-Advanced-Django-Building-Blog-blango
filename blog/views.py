@@ -9,6 +9,7 @@ def index(request):
   return render(request, "blog/index.html", {"posts": posts})
 
 def post_detail(request, slug):
+  post = get_object_or_404(Post, slug=slug)
   if request.user.is_active:
     if request.method == "POST":
       comment_form = CommentForm(request.POST)
@@ -22,7 +23,6 @@ def post_detail(request, slug):
       comment_form = CommentForm()
   else:
     comment_form = None
-  post = get_object_or_404(Post, slug=slug)
   return render(
     request,
     "blog/post-detail.html",
